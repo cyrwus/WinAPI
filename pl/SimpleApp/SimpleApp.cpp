@@ -46,12 +46,12 @@ int APIENTRY wWinMain(
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_SIMPLEAPP));
 
     MSG msg;
-    // Wejscie w glowna petle obslugi komunikatow, tj. ...
+    // Wejscie w glowna petle obslugi komunikatow: ...
     // ...  pobieranie komunikatow z kolejki ...
     while (GetMessage(&msg, nullptr, 0, 0)) {
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg)) {
             TranslateMessage(&msg);
-            // ... oddelegowanie komunikatow nieobsluzonych
+            // ... przekazywanie komunikatow do procedury okna glownego
             DispatchMessage(&msg);
         }
     }
@@ -130,7 +130,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
             {
                 case IDM_ABOUT:
                     // Reakcja na wybor polecenia "Pomoc" >> "O programie",
-                    // tj. aktualizacja stanu tego polecenia w menu
+                    // tj. otwarcie okienka dialogowego
                     DialogBox(hAppInstance, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
                     break;
 
@@ -173,7 +173,7 @@ INT_PTR CALLBACK About(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
             return (INT_PTR)TRUE;
 
         case WM_COMMAND:
-            // Obsluga polecen z okna dialogowego, tj. ...
+            // Obsluga polecen z okna dialogowego: ...
             // ... jesli kliknieto 'OK' lub 'Anuluj' ...
             if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL) {
                 // ... zamkniecie okna
