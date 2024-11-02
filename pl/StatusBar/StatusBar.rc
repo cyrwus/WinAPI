@@ -1,0 +1,133 @@
+// Skrypt zasobow wygenerowany przez program Microsoft Visual C++.
+//
+#include "resource.h"
+
+
+#define APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Wygenerowane z zasobu TEXTINCLUDE.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+LANGUAGE 21, 1
+
+/////////////////////////////////////////////////////////////////////////////
+// ICONS
+//
+// Ikona z najnizsza wartoscia identyfikatora umieszczana jest jako pierwsza,
+// aby zapewnic, ze ikona aplikacji pozostanie spojna we wszystkich systemach.
+//
+IDI_MAIN        ICON    "main.ico"
+IDI_SMALL       ICON    "small.ico"
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+// MENU
+//
+IDC_MAINWINDOW  MENU
+BEGIN
+    POPUP "&Plik"
+    BEGIN
+        MENUITEM "Za&koñcz",            IDM_EXIT
+    END
+    POPUP "&Ustawienia"
+    BEGIN
+        MENUITEM "Pasek &statusowy",    IDM_STATUSBAR, CHECKED
+    END
+END
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+// ACCELERATORS
+//
+IDC_MAINWINDOW  ACCELERATORS
+BEGIN
+END
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+
+#ifdef APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// TEXTINCLUDE
+//
+1 TEXTINCLUDE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "\r\n"
+    "\0"
+END
+/////////////////////////////////////////////////////////////////////////////
+
+#endif // APSTUDIO_INVOKED
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+// STRINGTABLE
+//
+STRINGTABLE
+BEGIN
+    // Nazwa klasy okna
+    IDC_MAINWINDOW      "MAINWINDOW"
+
+    // Tytul aplikacji
+    IDS_APP_TITLE       "Zadania z WinAPI :: Pasek statusowy"
+
+    // Komunikaty na pasku statusowym
+    IDS_STATUS_READY    "Gotowy"
+END
+/////////////////////////////////////////////////////////////////////////////
+
+#endif
+
+
+
+
+#ifndef APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// Wygenerowane z zasobu TEXTINCLUDE.
+//
+
+/////////////////////////////////////////////////////////////////////////////
+
+#endif // not APSTUDIO_INVOKED
