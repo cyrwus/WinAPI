@@ -14,7 +14,4 @@
 
 
 // Pliki naglowkowe srodowiska uruchomieniowego jezyka C
-#include <stdlib.h>
-#include <malloc.h>
-#include <memory.h>
 #include <tchar.h>
