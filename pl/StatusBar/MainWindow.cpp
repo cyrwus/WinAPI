@@ -3,7 +3,7 @@
 
 
 // Definicje zmiennych globalnych
-CStatusBar StatusBar;
+CStatusBar StatusBar;                           // obiekt paska statusowego
 
 
 //------------------------------------------------------------------------------
@@ -50,9 +50,9 @@ HWND CMainWindow::Create()
         nullptr
     );
     if (hWindow != NULL) {
-        // Ustawienie stopnia przezroczystosci okna ...
+        // Ustawienie stopnia przezroczystosci okna
         SetLayeredWindowAttributes(hWindow, RGB(0, 0, 0), 240, LWA_ALPHA);
-        // ... oraz pasek statusowy domyslnie widoczny
+        // Pasek statusowy domyslnie widoczny
         StatusBar.bVisible = TRUE;
     }
 
