@@ -111,7 +111,7 @@ VOID CMainWindow::OnToggleStatusBar()
 
 
 //------------------------------------------------------------------------------
-// Procedura obslugi wiadomosci dla glownego okna aplikacji
+// Procedura obslugi komunikatow dla glownego okna aplikacji
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
@@ -208,18 +208,19 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                     break;
 
                 default:
+                    // Przekazanie innych polecen do procedury domyslnej
                     return DefWindowProc(hWnd, uMsg, wParam, lParam);
             }
         }
         break;
 
         case WM_DESTROY:
-            // Obsluga wiadomosci o zamknieciu okna
+            // Obsluga komunikatu o zamknieciu okna
             PostQuitMessage(0);
             break;
 
         default:
-            // Domyslna procedura obslugi wiadomosci
+            // Przekazanie nieobsluzonych komunikatow do procedury domyslnej
             return DefWindowProc(hWnd, uMsg, wParam, lParam);
     }
     return 0;
