@@ -106,7 +106,7 @@ BOOL InitAppInstance(HINSTANCE hInstance, int nCmdShow)
     if (!hWnd)
         return FALSE;
 
-    // Wyswietlenie okna w systemie
+    // Wyswietlenie okna na ekranie
     ShowWindow(hWnd, nCmdShow);
     UpdateWindow(hWnd);
 
@@ -141,7 +141,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                     break;
 
                 default:
-                    // Przekazanie nieobsluzonych komunikatow do procedury domyslnej
+                    // Przekazanie innych polecen do procedury domyslnej
                     return DefWindowProc(hWnd, uMsg, wParam, lParam);
             }
         }
@@ -153,7 +153,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
             break;
 
         default:
-            // Domyslna procedura obslugi komunikatu
+            // Przekazanie nieobsluzonych komunikatow do procedury domyslnej
             return DefWindowProc(hWnd, uMsg, wParam, lParam);
     }
     return 0;
