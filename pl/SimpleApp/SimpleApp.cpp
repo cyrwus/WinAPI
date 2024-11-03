@@ -51,7 +51,7 @@ int APIENTRY wWinMain(
     while (GetMessage(&msg, nullptr, 0, 0)) {
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg)) {
             TranslateMessage(&msg);
-            // ... przekazywanie komunikatow do procedury okna glownego
+            // ... i przekazywanie ich do procedury okna glownego
             DispatchMessage(&msg);
         }
     }
@@ -115,7 +115,7 @@ BOOL InitAppInstance(HINSTANCE hInstance, int nCmdShow)
 
 
 //------------------------------------------------------------------------------
-// Procedura obslugi wiadomosci dla glownego okna aplikacji
+// Procedura obslugi komunikatow dla glownego okna aplikacji
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
@@ -141,18 +141,19 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                     break;
 
                 default:
+                    // Przekazanie nieobsluzonych komunikatow do procedury domyslnej
                     return DefWindowProc(hWnd, uMsg, wParam, lParam);
             }
         }
         break;
 
         case WM_DESTROY:
-            // Obsluga wiadomosci o zamknieciu okna
+            // Obsluga komunikatu o zamknieciu okna
             PostQuitMessage(0);
             break;
 
         default:
-            // Domyslna procedura obslugi wiadomosci
+            // Domyslna procedura obslugi komunikatu
             return DefWindowProc(hWnd, uMsg, wParam, lParam);
     }
     return 0;
@@ -160,7 +161,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 
 //------------------------------------------------------------------------------
-// Procedura obslugi wiadomosci dla okienka "O programie..."
+// Procedura obslugi komuniaktow dla okienka "O programie..."
 //
 INT_PTR CALLBACK About(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
@@ -173,8 +174,8 @@ INT_PTR CALLBACK About(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
             return (INT_PTR)TRUE;
 
         case WM_COMMAND:
-            // Obsluga polecen z okna dialogowego: ...
-            // ... jesli kliknieto 'OK' lub 'Anuluj' ...
+            // Obsluga polecen z okna dialogowego, tj. ...
+            // ... jesli wybrano 'OK' lub 'Anuluj' ...
             if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL) {
                 // ... zamkniecie okna
                 EndDialog(hDlg, LOWORD(wParam));
