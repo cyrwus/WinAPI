@@ -1,0 +1,251 @@
+// Skrypt zasobow wygenerowany przez program Microsoft Visual C++.
+//
+#include "resource.h"
+
+
+#define APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Wygenerowane z zasobu TEXTINCLUDE.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+LANGUAGE 21, 1
+
+/////////////////////////////////////////////////////////////////////////////
+// ICONS
+//
+// Ikona z najnizsza wartoscia identyfikatora umieszczana jest jako pierwsza,
+// aby zapewnic, ze ikona aplikacji pozostanie spojna we wszystkich systemach.
+//
+IDI_MAIN        ICON    "main.ico"
+IDI_SMALL       ICON    "small.ico"
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+// MENU
+//
+IDC_MAINWINDOW  MENU
+BEGIN
+    POPUP "&Plik"
+    BEGIN
+        MENUITEM "Za&koñcz",                   IDM_EXIT
+    END
+    POPUP "&Ustawienia"
+    BEGIN
+        MENUITEM "Pasek &statusowy",           IDM_STATUSBAR, CHECKED
+    END
+    POPUP "Pomo&c"
+    BEGIN
+        MENUITEM "Klawisze &nawigacyjne...",   IDM_NAVIKEYS
+        MENUITEM SEPARATOR
+        MENUITEM "&O programie...",            IDM_ABOUT
+    END
+END
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+// ACCELERATORS
+//
+IDC_MAINWINDOW  ACCELERATORS
+BEGIN
+    "?",        IDM_NAVIKEYS,   ASCII,  ALT
+    "/",        IDM_NAVIKEYS,   ASCII,  ALT
+END
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+// DIALOGS
+//
+/////////////////////////////////////////////////////////////////////////////
+// Okno dialogowe "O programie"
+//
+IDD_ABOUTBOX    DIALOGEX  160, 160, 168, 64
+STYLE   DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "O programie"
+FONT    8, "MS Shell Dlg"
+BEGIN
+    ICON   IDI_MAIN,                           IDC_STATIC, 14, 14, 21, 20
+    LTEXT  "NaviKeys, Wersja 1.0",             IDC_STATIC, 42, 14,114,  8, SS_NOPREFIX
+    LTEXT  "Copyright (c) 2024",               IDC_STATIC, 42, 26,114,  8
+
+    DEFPUSHBUTTON  "OK",                       IDOK,      112, 42, 48, 14, WS_GROUP
+END
+
+/////////////////////////////////////////////////////////////////////////////
+// Okno dialogowe "Klawisze nawigacyjne"
+//
+IDD_OVERVIEW    DIALOGEX  160, 160, 200, 232
+STYLE   DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Klawisze nawigacyjne"
+FONT    8, "MS Shell Dlg"
+BEGIN
+    LTEXT  "Powrót na start",                  IDC_STATIC,  14, 12, 64,  8
+    LTEXT  "Ruch do przodu",                   IDC_STATIC,  14, 28, 64,  8
+    LTEXT  "Ruch do ty³u",                     IDC_STATIC,  14, 40, 64,  8
+    LTEXT  "Ruch w lewo",                      IDC_STATIC,  14, 52, 64,  8
+    LTEXT  "Ruch w prawo",                     IDC_STATIC,  14, 64, 64,  8
+    LTEXT  "Ruch do góry",                     IDC_STATIC,  14, 76, 64,  8
+    LTEXT  "Ruch do do³u",                     IDC_STATIC,  14, 88, 64,  8
+    LTEXT  "Obrót w lewo",                     IDC_STATIC,  14,104, 64,  8
+    LTEXT  "Obrót w prawo",                    IDC_STATIC,  14,116, 64,  8
+    LTEXT  "Obrót do góry",                    IDC_STATIC,  14,128, 64,  8
+    LTEXT  "Obrót do do³u",                    IDC_STATIC,  14,140, 64,  8
+    LTEXT  "Przechy³ w lewo",                  IDC_STATIC,  14,156, 64,  8
+    LTEXT  "Przechy³ w prawo",                 IDC_STATIC,  14,168, 64,  8
+    LTEXT  "Przybli¿enie widoku",              IDC_STATIC,  14,184, 64,  8
+    LTEXT  "Oddalenie widoku",                 IDC_STATIC,  14,196, 64,  8
+
+    LTEXT  "Home",                             IDC_STATIC,  88, 12,104,  8
+    LTEXT  "Strza³ka w górê",                  IDC_STATIC,  88, 28,104,  8
+    LTEXT  "Strza³ka w dó³",                   IDC_STATIC,  88, 40,104,  8
+    LTEXT  "Strza³ka w lewo",                  IDC_STATIC,  88, 52,104,  8
+    LTEXT  "Strza³ka w prawo",                 IDC_STATIC,  88, 64,104,  8
+    LTEXT  "Shift + Strza³ka w górê",          IDC_STATIC,  88, 76,104,  8
+    LTEXT  "Shift + Strza³ka w dó³",           IDC_STATIC,  88, 88,104,  8
+    LTEXT  "Ctrl + Strza³ka w lewo",           IDC_STATIC,  88,104,104,  8
+    LTEXT  "Ctrl + Strza³ka w prawo",          IDC_STATIC,  88,116,104,  8
+    LTEXT  "Ctrl + Strza³ka w górê",           IDC_STATIC,  88,128,104,  8
+    LTEXT  "Ctrl + Strza³ka w dó³",            IDC_STATIC,  88,140,104,  8
+    LTEXT  "Ctrl + Shift + Strza³ka w lewo",   IDC_STATIC,  88,156,104,  8
+    LTEXT  "Ctrl + Shift + Strza³ka w prawo",  IDC_STATIC,  88,168,104,  8
+    LTEXT  "+",                                IDC_STATIC,  88,184,104,  8
+    LTEXT  "-",                                IDC_STATIC,  88,196,104,  8
+
+    DEFPUSHBUTTON  "OK",                       IDOK,       140,208, 48, 14, WS_GROUP
+END
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+#ifdef APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// DESIGNINFO
+//
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN,     8
+        RIGHTMARGIN,  160
+        TOPMARGIN,      8
+        BOTTOMMARGIN,  56
+    END
+
+    IDD_OVERVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN,     8
+        RIGHTMARGIN,  208
+        TOPMARGIN,      8
+        BOTTOMMARGIN, 232
+    END
+END
+/////////////////////////////////////////////////////////////////////////////
+
+#endif // APSTUDIO_INVOKED
+
+
+
+
+#ifdef APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// TEXTINCLUDE
+//
+1 TEXTINCLUDE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif // APSTUDIO_INVOKED
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+// STRINGTABLE
+//
+STRINGTABLE
+BEGIN
+    // Nazwa klasy okna
+    IDC_MAINWINDOW         "MAINWINDOW"
+
+    // Tytul aplikacji
+    IDS_APP_TITLE          "Zadania z WinAPI :: Klawisze nawigacyjne"
+
+    // Komunikaty na pasku statusowym
+    IDS_STATUS_READY       "Gotowy"
+    IDS_STATUS_HOME        "Powrót na start"
+    IDS_STATUS_MOV_FORWARD "Ruch do przodu"
+    IDS_STATUS_MOV_BACK    "Ruch do ty³u"
+    IDS_STATUS_MOV_LEFT    "Ruch w lewo"
+    IDS_STATUS_MOV_RIGHT   "Ruch w prawo"
+    IDS_STATUS_MOV_UP      "Ruch do góry"
+    IDS_STATUS_MOV_DOWN    "Ruch do do³u"
+    IDS_STATUS_ROT_LEFT    "Obrót w lewo"
+    IDS_STATUS_ROT_RIGHT   "Obrót w prawo"
+    IDS_STATUS_ROT_UP      "Obrót do góry"
+    IDS_STATUS_ROT_DOWN    "Obrót do do³u"
+    IDS_STATUS_TLT_LEFT    "Przechy³ w lewo"
+    IDS_STATUS_TLT_RIGHT   "Przechy³ w prawo"
+    IDS_STATUS_ZOOM_IN     "Przybli¿enie widoku"
+    IDS_STATUS_ZOOM_OUT    "Oddalenie widoku"
+END
+/////////////////////////////////////////////////////////////////////////////
+
+#endif
+
+
+
+
+#ifndef APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// Wygenerowane z zasobu TEXTINCLUDE.
+//
+
+/////////////////////////////////////////////////////////////////////////////
+
+#endif // not APSTUDIO_INVOKED
