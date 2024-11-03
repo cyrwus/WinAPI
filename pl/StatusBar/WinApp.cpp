@@ -17,7 +17,7 @@ BOOL InitAppInstance(HINSTANCE hInstance, int nCmdShow)
     HWND hWnd = MainWindow.Create();
     if (!hWnd)
         return FALSE;
-    // ... i wyswietlenie
+    // ... i wyswietlenie go na ekranie
     ShowWindow(hWnd, nCmdShow);
     UpdateWindow(hWnd);
 
@@ -57,7 +57,7 @@ int APIENTRY wWinMain(
     while (GetMessage(&msg, nullptr, 0, 0)) {
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg)) {
             TranslateMessage(&msg);
-            // ... przekazywanie komunikatow do procedury okna glownego
+            // ... i przekazywanie ich do procedury okna glownego
             DispatchMessage(&msg);
         }
     }
